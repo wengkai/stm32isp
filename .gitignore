@@ -1,0 +1,5 @@
+*.o
+stm32isp
+*.pdf
+*.hex
+t

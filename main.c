@@ -205,7 +205,7 @@ int main(int argc, char *argv[])
 	printf(
 	"Portable command line ISP for STM32F10x family\n"
 	"Version 0.1 compiled for Apple MacOS X: "__DATE__ " " __TIME__ "\n"
-	"Copyright (c) by Weng Kai, 2011-2012, Email: wengkai@zju.edu.cn\n"
+	"Copyright (C) by Weng Kai, 2011-2015, Email: ba5ag.kai@gmail.com\n"
 	"\n");
 
 	if ( parseOptions(argc, argv, &config) ==0 || verifyCondig(&config) ==0 ) {

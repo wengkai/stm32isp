@@ -25,6 +25,10 @@ stm32isp: $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAG) -c -o $@ $<
 
+# test
+test: $(TARGET)
+	./$(TARGET) -term 9600 -verbose -bootp RTS -reset DTR blink.hex /dev/$1 115200
+
 # install
 install: $(TARGET)
 	sudo cp $(TARGET) /usr/local/bin
