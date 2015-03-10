@@ -1,0 +1,15 @@
+STM32ISP
+
+a command line tool for ST STM32F10x chip(ARM Cortex M3 kernel) In-System Programming
+
+features:
+device identification
+write to flash/ram
+read from flash/ram
+
+tested environment:
+Mac OS 10.7.2
+STM32F100
+
+E-mail: ba5ag.kai@gmail.com
+
