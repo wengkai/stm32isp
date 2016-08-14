@@ -164,7 +164,10 @@ int serialRead(int fd, unsigned char *buffer, int len)
 {
 	int ret = SER_OK;
 	int r;
-	struct fd_set fdr;
+#ifdef __APPLE__
+    struct
+#endif
+	fd_set fdr;
 	struct timeval timeout = {3,0};
 	int cnt = 0;
 

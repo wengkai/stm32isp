@@ -133,8 +133,6 @@ static int parseOptions(int argc, char* argv[], Config* p)
 	int argidx = 0;
 	int ret = 0;
 
-	memset(p, 0, sizeof(Config));	//	init the config
-
 	for ( i=1; i< argc; i++ ) {
 		if ( argv[i][0] == '-' ) {	//	an option
 			if ( strcmp(argv[i], "-bin") ==0 ) {

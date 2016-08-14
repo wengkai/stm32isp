@@ -6,7 +6,9 @@
  */
 #include <stdio.h>
 #include <termios.h>
+#include <sys/select.h>
 #include <unistd.h>
+#include <sys/ioctl.h>
 #include "term.h"
 #include "serial.h"
 #include "stm32.h"
@@ -33,7 +35,10 @@ int term(char* portName, int baud, int bootp, int reset, int isEcho, int isLine)
 	struct termios oldt;
 	struct termios newt;
 	char ch = 0;
-	struct fd_set fdr;
+#ifdef __APPLE__
+    struct 
+#endif
+	fd_set fdr;
 	int r;
 	fd = serialOpen(portName, baud, 8, 'N', 1);
 	if ( fd >0 ) {
