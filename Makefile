@@ -27,7 +27,7 @@ stm32isp: $(OBJS)
 
 # test
 test: $(TARGET)
-	./$(TARGET) -term 9600 -verbose -bootp RTS -reset DTR blink.hex /dev/tty.usbserial-AE01DHN7 115200
+	./$(TARGET) -term 9600 -verbose -bootp RTS -reset DTR blink.hex /dev/tty.usbserial-AE01DHMV 115200
 
 # install
 install: $(TARGET)
