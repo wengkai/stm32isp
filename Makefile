@@ -18,7 +18,6 @@ serial.o : serial.h
 stm32.o : stm32.h serial.h memmap.h
 term.o : term.h serial.h stm32.h
 
-
 # Tool invocations
 stm32isp: $(OBJS)
 	$(CC)  -o $@ $(OBJS)
@@ -28,7 +27,7 @@ stm32isp: $(OBJS)
 
 # test
 test: $(TARGET)
-	./$(TARGET) -term 9600 -verbose -bootp RTS -reset DTR blink.hex /dev/$1 115200
+	./$(TARGET) -term 9600 -verbose -bootp RTS -reset DTR blink.hex /dev/tty.usbserial-AE01DHMV 115200
 
 # install
 install: $(TARGET)

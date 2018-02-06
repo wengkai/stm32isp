@@ -42,7 +42,9 @@ void mmapPut(MemMap* mp, unsigned int address, unsigned int len, unsigned char *
 //		printf("create new bk\n");
 		pBlock = (MemBlock*)malloc(sizeof(MemBlock));
 		pBlock->next = 0;
-		pBlock->address = address;
+		// pBlock->address = address;
+		pBlock->address = address/MMAP_BLOCK_SIZE*MMAP_BLOCK_SIZE;
+		// printf("create new bk %X at %X\n", address, pBlock->address);
 		pBlock->lastValid = address;
 		memset(pBlock->data, 0xFF, MMAP_BLOCK_SIZE);	//	None used bytes as 0xFF
 		//	add new block
