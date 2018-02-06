@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <sys/ioctl.h>
 #include <termios.h>
 #include <assert.h>
 #include <stdlib.h>

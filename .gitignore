@@ -3,3 +3,7 @@ stm32isp
 *.pdf
 *.hex
 t
+
+GPATH
+GRTAGS
+GTAGS
