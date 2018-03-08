@@ -133,6 +133,8 @@ static int parseOptions(int argc, char* argv[], Config* p)
 	int argidx = 0;
 	int ret = 0;
 
+	memset(p, 0, sizeof(Config));	//	init the config
+
 	for ( i=1; i< argc; i++ ) {
 		if ( argv[i][0] == '-' ) {	//	an option
 			if ( strcmp(argv[i], "-bin") ==0 ) {
@@ -202,8 +204,8 @@ int main(int argc, char *argv[])
 
 	printf(
 	"Portable command line ISP for STM32F10x family\n"
-	"Version 0.1 compiled for Apple MacOS X: "__DATE__ " " __TIME__ "\n"
-	"Copyright (C) by Weng Kai, 2011-2015, Email: ba5ag.kai@gmail.com\n"
+	"Version 0.2 compiled for Apple MacOS X: "__DATE__ " " __TIME__ "\n"
+	"Copyright (c) by Weng Kai, 2011-2018, Email: wengkai@zju.edu.cn\n"
 	"\n");
 
 	if ( parseOptions(argc, argv, &config) ==0 || verifyCondig(&config) ==0 ) {

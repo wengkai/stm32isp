@@ -4,11 +4,11 @@
  *  Created on: 2011-12-24
  *      Author: wengkai
  */
- 
+
 #ifndef MEMMAP_H_
 #define MEMMAP_H_
 
-#define MMAP_BLOCK_SIZE 4*1024
+#define MMAP_BLOCK_SIZE (4*1024)
 
 typedef struct _mem_block {
 	unsigned int address;

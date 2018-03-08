@@ -5,10 +5,10 @@
  *      Author: wengkai
  */
 #include <stdio.h>
-#include <termios.h>
 #include <sys/select.h>
-#include <unistd.h>
+#include <termios.h>
 #include <sys/ioctl.h>
+#include <unistd.h>
 #include "term.h"
 #include "serial.h"
 #include "stm32.h"
@@ -36,7 +36,7 @@ int term(char* portName, int baud, int bootp, int reset, int isEcho, int isLine)
 	struct termios newt;
 	char ch = 0;
 #ifdef __APPLE__
-    struct 
+	struct 
 #endif
 	fd_set fdr;
 	int r;

@@ -34,8 +34,9 @@ int readHexFile(char* fileName, MemMap *mp)
 			if ( rec.type == 0x04 ) {
 				addrBase = rec.data[0] *256 + rec.data[1];
 				addrBase <<= 16;
-			} else if ( rec.type == 0x00 ) {
+			} else if ( rec.type == 0x00 && rec.len >0 ) {
 				mmapPut(mp, addrBase + rec.offset, rec.len, rec.data);
+				// printf("%X\n", addrBase + rec.offset);
 			}
 			free(rec.data);
 		}
